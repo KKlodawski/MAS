@@ -1,0 +1,31 @@
+﻿<Window x:Class="ProjectImplementation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectImplementation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="GamesCompanyAssistant - Dodaj drużynę" Height="350" Width="420">
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Style="{StaticResource TextBoxStyle}" Text="Dodaj drużynę" Margin="10" TextAlignment="Center"/>
+        
+        <TextBlock Style="{StaticResource TextBoxStyle}" Text="Nazwa drużyny:" Margin="10" Grid.Row="1"/>
+        <TextBox x:Name="TeamNameTextBox" Margin="10" Grid.Row="2" TextChanged="TeamNameTextBox_OnTextChanged"/>
+        
+        <TextBlock Style="{StaticResource TextBoxStyle}" Text="Rola:" Margin="10" Grid.Row="3"/>
+        <TextBox x:Name="RoleTextBox" Margin="10" Grid.Row="4" TextChanged="RoleTextBox_OnTextChanged"/>
+        
+        <Button Content="Potwierdź" Margin="10" Width="100" Height="50" Grid.Row="5" Click="Button_Click"/>
+        
+    </Grid>
+</Window>

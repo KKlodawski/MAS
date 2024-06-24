@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProjectImplementation.GameListAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ProjectImplementation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="GamesCompanyAssistant - przypisz grę" Height="450" Width="400">
+    <Grid Background="{StaticResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Style="{StaticResource TextBoxStyle}" Text="Nazwa gry:" Margin="10"/>
+        <ListBox x:Name="GamesListBox" SelectionMode="Single" DisplayMemberPath="Tytul" Margin="10" Grid.Row="1" SelectionChanged="GamesListBox_OnSelectionChanged"/>
+        
+        <Button Content="Potwierdź" Margin="10" Grid.Row="2" HorizontalAlignment="Right" Click="ButtonBase_OnClick"/>
+    </Grid>
+</Window>
